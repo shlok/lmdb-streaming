@@ -35,7 +35,7 @@ Congratulations. You now have `env` (of type `MDB_env`) and `dbi` (of type `MDB_
 
 ## Using this library
 
-If you are familiar with the [streaming](https://hackage.haskell.org/package/streaming) library, you will feel right at home:
+If you are familiar with the [streaming](https://hackage.haskell.org/package/streaming) library, you will feel right at home. The following functions allow you to stream key-value pairs to and from an LMDB database:
 
 ```haskell
 import Control.Monad.Trans.Resource (MonadResource)
@@ -55,4 +55,4 @@ writeLMDB :: (MonadResource m)
           -> m r
 ```
 
-Note that an LMDB transaction (read-only for `readLMDB` and read-write for `writeLMDB`) is kept open for the duration of the stream. So when using this library, you should bear in mind LMDB’s caveats regarding long-lived transactions.
+Do not supply empty keys in `writeLMDB`; this is not allowed by LMDB. Note also that an LMDB transaction (read-only for `readLMDB` and read-write for `writeLMDB`) is kept open for the duration of the stream; so when using this library, you should bear in mind LMDB’s caveats regarding long-lived transactions.
