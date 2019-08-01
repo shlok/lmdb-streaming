@@ -35,7 +35,7 @@ Congratulations. You now have `env` (of type `MDB_env`) and `dbi` (of type `MDB_
 
 ## Using this library
 
-If you are familiar with the [streaming](https://hackage.haskell.org/package/streaming) library, you will feel right at home. The following functions allow you to stream key-value pairs to and from an LMDB database:
+If you are familiar with the [streaming](https://hackage.haskell.org/package/streaming) library, you will feel right at home. The following functions, located in `Database.LMDB.Streaming`, allow you to stream key-value pairs to and from an LMDB database:
 
 ```haskell
 import Control.Monad.Trans.Resource (MonadResource)
