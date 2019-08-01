@@ -1,3 +1,3 @@
-# Changelog for streaming-lmdb
+# Changelog for lmdb-streaming
 
 ## Unreleased changes

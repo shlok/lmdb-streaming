@@ -6,7 +6,7 @@ module Main where
 
 import Database.LMDB.Raw (MDB_dbi', MDB_env, mdb_dbi_open', mdb_env_create, mdb_env_open,
                           mdb_env_set_mapsize, mdb_txn_begin, mdb_txn_commit)
-import qualified Streaming.LMDB.Tests (tests)
+import qualified Database.LMDB.Streaming.Tests (tests)
 import System.Directory (removeDirectoryRecursive)
 import System.Environment (setEnv)
 import System.IO.Temp (createTempDirectory, getCanonicalTemporaryDirectory)
@@ -19,7 +19,7 @@ main = do
     setEnv "TASTY_NUM_THREADS" "1" -- Multiple tests use the same LMDB database.
     defaultMain $ withResource
         (do tmpParent <- getCanonicalTemporaryDirectory
-            tmpDir <- createTempDirectory tmpParent "streaming-lmdb-tests"
+            tmpDir <- createTempDirectory tmpParent "lmdb-streaming-tests"
             env <- mdb_env_create
             mdb_env_set_mapsize env (1024 * 1024 * 1024 * 1024)
             mdb_env_open env tmpDir []
@@ -32,7 +32,7 @@ main = do
 tests :: IO (MDB_env, MDB_dbi') -> TestTree
 tests res =
     testGroup "Tests"
-        [ testGroup "Streaming.LMDB.Tests" $
-                     Streaming.LMDB.Tests.tests res ]
+        [ testGroup "Database.LMDB.Streaming.Tests" $
+                     Database.LMDB.Streaming.Tests.tests res ]
 
 --------------------------------------------------------------------------------

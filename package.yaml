@@ -1,6 +1,6 @@
-name:                streaming-lmdb
+name:                lmdb-streaming
 version:             0.1.0.0
-github:              "shlok/streaming-lmdb"
+github:              "shlok/lmdb-streaming"
 license:             BSD3
 author:              "Shlok Datye"
 maintainer:          "shlok@quant.is"
@@ -13,36 +13,35 @@ extra-source-files:
 synopsis:            Stream data to or from an LMDB database.
 category:            Data, Database, Streaming
 
-description:         Please see the README on GitHub at <https://github.com/shlok/streaming-lmdb#readme>
-
-ghc-options:
-- -Wall
+description:         Please see the README on GitHub at <https://github.com/shlok/lmdb-streaming#readme>
 
 dependencies:
-- async
 - base >= 4.7 && < 5
 - bytestring
 - lmdb
-- mtl
+- lmdb-resource
 - resourcet
 - streaming
+
+ghc-options:
+- -Wall
 
 library:
   source-dirs: src
 
 tests:
-  streaming-lmdb-test:
-    main:            TestSuite.hs
-    source-dirs:     test
+  lmdb-streaming-test:
+    main:                TestSuite.hs
+    source-dirs:         test
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - containers
+    - async
     - directory
+    - lmdb-streaming
     - QuickCheck
-    - streaming-lmdb
     - tasty
     - tasty-quickcheck
     - temporary

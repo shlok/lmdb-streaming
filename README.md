@@ -1,4 +1,4 @@
-# streaming-lmdb
+# lmdb-streaming
 
 Stream data to or from an LMDB database using Haskell.
 

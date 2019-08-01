@@ -1,4 +1,4 @@
 .DS_Store
 .stack-work/
-streaming-lmdb.cabal
+lmdb-streaming.cabal
 *~
