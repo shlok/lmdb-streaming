@@ -51,6 +51,7 @@ readLMDB :: (MonadResource m)
 writeLMDB :: (MonadResource m)
           => MDB_env
           -> MDB_dbi'
+          -> Bool     -- If True, an exception will be thrown when attempting to re-insert a key.
           -> Stream (Of (ByteString, ByteString)) m r
           -> m r
 ```

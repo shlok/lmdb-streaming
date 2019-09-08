@@ -1,6 +1,6 @@
 resolver: lts-14.1
 extra-deps:
 - git: https://github.com/shlok/lmdb-resource
-  commit: 2dc5dcef6b9b23060721346ad02da2222117c371
+  commit: 5f943872a9528f984b1188990967a1fc1315bf6e
 packages:
 - .
