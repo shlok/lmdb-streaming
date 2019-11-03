@@ -13,14 +13,14 @@ packages:
     git: https://github.com/shlok/lmdb-resource
     pantry-tree:
       size: 683
-      sha256: ca7239b5421a8875cab35bf2c6bf553e4bdc1dad3e6062ecf75d2fa5b2a476dd
-    commit: 5f943872a9528f984b1188990967a1fc1315bf6e
+      sha256: 90f53cd4746fed40ace3ddb87755c140ce9a411e333f1047b836f9d5ab7cb533
+    commit: 9e40404f4ffd4ce720d54d09bdef82d9c3f6280e
   original:
     git: https://github.com/shlok/lmdb-resource
-    commit: 5f943872a9528f984b1188990967a1fc1315bf6e
+    commit: 9e40404f4ffd4ce720d54d09bdef82d9c3f6280e
 snapshots:
 - completed:
-    size: 523448
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/14/1.yaml
-    sha256: 0045b9bae36c3bb2dd374c29b586389845af1557eea0423958d152fc500d4fbf
-  original: lts-14.1
+    size: 545658
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/14/12.yaml
+    sha256: 26b807457213126d26b595439d705dc824dbb7618b0de6b900adc2bf6a059406
+  original: lts-14.12
